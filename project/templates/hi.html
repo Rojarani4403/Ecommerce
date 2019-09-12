@@ -1,0 +1,35 @@
+{% extends "common/base.html" %}
+{% load static %}
+{% block content %}
+<h1>Hi Welcome</h1>
+<img src="{% static 'images/c3.jpg' %}">
+
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+      <!-- {% for top in top_movie %}
+        {% if forloop.counter == 1 %} -->
+        <div class="item active">
+        <!-- {% else %} -->
+        <div class="item">
+        <!-- {% endif %} -->
+          <img class="carousel-img" src="{% static 'images/c3.jpg' %}" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <!-- <h1>{{ top.name }}</h1>
+              <p>{{ top.cast }}</p>
+              <p>
+                <a class="btn btn-lg btn-primary" onclick="watchTrailer('{{ top.name }}','{{ top.trailer }}')" role="button">Watch Trailer</a>
+                <a class="btn btn-lg btn-primary" href="{% url 'movie_details' top.id %}" role="button">Book Now</a>
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <!-- {% endfor %} -->
+      </div>
+{% endblock %}
