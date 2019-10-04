@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url '/' %}">
+				{% csrf_token %}
+
+
+                {{form}}
+<!--				<input type="hidden" name="show_id" id="show_id" value="{{ show_info.id }}" readonly />-->
+				<button type="submit">Confirm</button>
+			</form>
+</body>
+</html>
