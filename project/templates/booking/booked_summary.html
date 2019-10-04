@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for i in object %}
+<h1>{{i.seat.seat_type}}</h1>
+{{i.booking}}
+{{i.booking.paid_by}}
+{% endfor %}
+</body>
+</html>
