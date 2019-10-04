@@ -44,9 +44,11 @@ urlpatterns = [
     url(r'^booking/payment_confirmation/booking/seatconflict.html$', TemplateView.as_view(template_name="booking/seatconflict.html"), name='seatconflict'),
 url(r'^hi/',TemplateView.as_view(template_name="hi.html"),name="hi"),
 
-
-
-
+url(r'^search/',include('search.urls')),
+url(r'^bookedSummary/',booking_views.bookedSummary.as_view()),
+url(r'^theatre/$',booking_views.theatre_list,name="theatre_list"),
+url(r'^theatre/(?P<theatre_id>\d+)/$',booking_views.theatre_details,name='theatre_details'),
+url(r'map/',TemplateView.as_view(template_name="theatre/sample.html")),
 ]
 
 

@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'stripe',
     'checkout',
     'booking',
+    #'search',
+'geopy',
 ]
 
 MIDDLEWARE = [
@@ -170,7 +172,7 @@ ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL =None #Redirect signed in 
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 ACCOUNT_EMAIL_REQUIRED =False #Email not required for signup.
 ACCOUNT_EMAIL_VERIFICATION = "optional"
-ACCOUNT_EMAIL_SUBJECT_PREFIX = "mD ecommerce" #default email subject on the verification link email.
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "Book myshow" #default email subject on the verification link email.
 ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
 
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True #when user confirms email,he's automat" logged in.

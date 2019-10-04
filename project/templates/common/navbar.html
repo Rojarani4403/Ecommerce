@@ -19,10 +19,11 @@
           {% url 'about' as about %}
           {% url 'contact' as contact %}
           {% url 'booking' as booking %}
+	{% url 'theatre_list' as theatre_list %}
             <li {% if request.path == home %} class="active" {% endif %}> <a href="{% url 'home' %}">Home</a> </li>
-            <li {% if request.path == about %} class="active" {% endif %}> <a href="{% url 'booking' %}">Movies</a> </li>
-            <li {% if request.path == contact %} class="active" {% endif %}> <a href="{% url 'contact' %}">Contact</a> </li>
-
+            <li {% if request.path == about %} class="active" {% endif %}> <a href="{% url 'booking' %}">movies</a> </li>
+            <li {% if request.path == theatre_list %} class="active" {% endif %}> <a href="{% url 'theatre_list' %}">theatre</a> </li>
+<li {% if request.path == contact %} class="active" {% endif %}> <a href="{% url 'contact' %}">Contact</a> </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
               <ul class="dropdown-menu">

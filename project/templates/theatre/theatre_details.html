@@ -6,13 +6,17 @@
 
 {% block content %}
 
+
+
 <div class="media">
   <div class="media-left">
     <a href="#">
       <img class="media-object" src="" alt="{{ theatre_info.name }}">
     </a>
   </div>
+
   <div class="media-body form-horizontal">
+
     <h4 class="media-heading">{{ theatre_info.name }}</h4>
     <div class="form-group">
       <label class="col-sm-2 control-label">City</label>
@@ -40,6 +44,9 @@
     </div>
   </div>
 </div>
+<iframe src="/map"></iframe>
+
+<!--
 
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -65,5 +72,6 @@
 		{% endfor %}
   </div>
 </div>
-
+--->
 {% endblock %}
+

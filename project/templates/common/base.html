@@ -95,6 +95,8 @@
                     });
                 });
             </script>
+{% block 'extrascript' %}
+{% endblock %}
 </head>
 <body>
 
@@ -139,6 +141,7 @@
             <!-- jssor slider scripts-->
             <!-- use jssor.slider.debug.js for debug -->
             <script type="text/javascript" src="/static/js/jssor.slider.mini.js"></script>
+{% include 'footer.html' %}
   </body>
 
 </html>

@@ -105,10 +105,29 @@ class BookedSeat(models.Model):
 
     def __str__(self):
         return str(self.seat) + '|' + str(self.booking)
+#
+class country(models.Model):
 
+    country_name=models.CharField( max_length=200,default='select')
 
+    def __str__(self):
+        return self.country_name
+#
+class state(models.Model):
 
-def show_index(request):
-    movie_list = Movie.objects.all().order_by('popularity_index')
-    top_movie = Movie.objects.all().order_by('popularity_index')[:3]
-    return render(request, 'common/booking.html', {'movie_list': movie_list,'top_movie': top_movie})
+    country_field=models.ForeignKey(country, on_delete=models.CASCADE, default='select')
+    state_name = models.CharField(max_length=200,unique=True)
+
+    def __str__(self):
+        return self.state_name
+
+    def __unicode__(self):
+        return self.state_name
+
+class City(models.Model):
+
+    state=models.ForeignKey(state,on_delete=models.CASCADE, default='select')
+    city_name = models.CharField(max_length=200,unique=True)
+
+    def __str__(self):
+        return self.city_name

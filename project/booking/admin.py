@@ -3,6 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from .models import Booking,Movie,Show,Seat,BookedSeat,Theatre
 
+from .models import country,state,City
 class BookingAdmin(admin.ModelAdmin):
 	class Meta:
 		model = Booking
@@ -37,3 +38,24 @@ class TheatreAdmin(admin.ModelAdmin):
 		model = Theatre
 
 admin.site.register(Theatre,TheatreAdmin)
+
+class CountryAdmin(admin.ModelAdmin):
+	list_display = ('country_name',)
+	fields = ('country_name',)
+	ordering = ('country_name',)
+admin.site.register(country,CountryAdmin)
+#
+class StateAdmin(admin.ModelAdmin):
+	list_display = ('state_name','country_field',)
+	fields = ('state_name','country_field')
+	ordering = ('country_field',)
+admin.site.register(state,StateAdmin)
+#
+
+class CityAdmin(admin.ModelAdmin):
+	list_display = ('city_name','state',)
+	fields = ('city_name','state')
+	ordering = ('state',)
+	search_fields = ('state',)
+
+admin.site.register(City,CityAdmin)
